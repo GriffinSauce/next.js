@@ -1867,6 +1867,7 @@ export default class Router implements BaseRouter {
       this._shallow = options.shallow
       window.history[method](
         {
+          ...(window.history.state ?? {}),
           url,
           as,
           options,
